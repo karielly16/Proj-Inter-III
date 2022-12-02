@@ -6,7 +6,6 @@ Servo labioSDireito;
 Servo labioSEsquerdo;
 int pos = 0;
 int val;
-int angulo = 0;
 int BotaoSorriso = 2;
 int BotaoTristeza = 5;
 int BotaoRaiva = 8;
