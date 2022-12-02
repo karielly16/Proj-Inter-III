@@ -3,8 +3,10 @@
 Servo olhoDireito;
 Servo olhoEsquerdo;
 Servo labioSDireito;
+Servo labioSEsquerdo;
 int pos = 0;
 int val;
+int angulo = 0;
 int BotaoSorriso = 2;
 int BotaoTristeza = 5;
 int BotaoRaiva = 8;
@@ -21,7 +23,7 @@ void setup()
   olhoDireito.attach(3);
   olhoEsquerdo.attach(4);
   labioSDireito.attach(7);
-
+  labioSEsquerdo.attach(6);
 }
 
 void loop()
@@ -48,27 +50,32 @@ void loop()
 
 
 void Sorrir() {
-  olhoDireito.write(90);
-  olhoEsquerdo.write(45);
-    labioSDireito.write(90);
+  olhoDireito.write(0);
+  olhoEsquerdo.write(0);
+  labioSDireito.write(0);
+  labioSEsquerdo.write(0);
 }
 
 void Triste() {
-  olhoDireito.write(45);
+  olhoDireito.write(90);
   olhoEsquerdo.write(90);
-  labioSDireito.write(90);
+  labioSDireito.write(30);
+  labioSEsquerdo.write(-20);
 }
 
 void Raiva() {
-  olhoDireito.write(45);
-  olhoEsquerdo.write(90);
-  labioSDireito.write(45);
+  olhoDireito.write(40);
+  olhoEsquerdo.write(300);
+  labioSDireito.write(0);
+  labioSEsquerdo.write(30);
 }
 
 void Medo() {
-  olhoDireito.write(45);
-  olhoEsquerdo.write(90);
-  labioSDireito.write(90);
+  
+  olhoDireito.write(20);
+  olhoEsquerdo.write(220);
+  labioSDireito.write(30);
+  labioSEsquerdo.write(25);
 }
 
 
@@ -76,4 +83,5 @@ void CaraMorna() {
   olhoDireito.write(0);
   olhoEsquerdo.write(0);
   labioSDireito.write(0);
+  labioSEsquerdo.write(0);
 }
